@@ -12,6 +12,8 @@
         .hide {
             display: none;
         }
+
+    
     </style>
 </head>
 
@@ -19,11 +21,13 @@
 
 <div class="banner-wrapper pt-md-0 pt-5">
          <img src="images/ajanta-logo.png" alt="logo" class="logo logoposition">
-         <div class="container">
-            <div class="row justify-content-center align-items-center">
-               <div class="col-lg-6 d-none d-md-block">
-                  <div class="img-shree-cover">
-                     <img src="images/home/doc.png" style="-webkit-animation: bounceHero 5s ease-in-out infinite;" class="img-fluid" alt="docs">
+         <div class="container h-lg-100">
+            <div class="row justify-content-center align-items-center h-lg-100">
+               <div class="col-lg-6  h-lg-100">
+                  <div class="img-shree-cover  h-lg-100">
+
+                     <img src="images/home/mob_images.png" style="-webkit-animation: bounceHero 5s ease-in-out infinite;" class="img-fluid  d-block d-lg-none" alt="docs">
+                     <img src="images/home/doc.png" style="-webkit-animation: bounceHero 5s ease-in-out infinite;" class="img-fluid d-none d-lg-block" alt="docs">
                   </div>
                </div>
                <div class="col-lg-6">

@@ -25,13 +25,13 @@ $html = '<html><head>
     <link rel="stylesheet" href="style.css">
 </head>
 <body style="text-align: center;">
-    <div class="logo_cover" style="position:absolute;top:180px;width:100%;text-align: center;">
+    <div class="logo_cover" style="position:absolute;top:140px;width:100%;text-align: center;">
     <img src="images/logo-dark.png" alt="logo" style="max-width:70px;height:auto;">
     <h1 style="font-size: 18px;color: #2f2884;">RAVI TIWARI</h1>  
     <h1 style="font-size: 16px;color: #2f2884;letter-spacing: 1.5px;margin-top: 10px;">EYE SPECIALIST</h1>  
     <p style="max-width:300px;color: #2f2884;font-size:14px;margin: auto;"> B-003, Star Premier -1/B,C, Indralok Phase-5, Annapurna Estate, Bhayander(East)</p>
     </div>
-    <img src="images/banner_midas.png" style="position:absolute;left:0;top:0;z-index:-1;height:100vh;margin:auto;width:100%;" alt="banner_midas">
+    <img src="images/banner_midas.png" style="position:absolute;left:0;top:0;z-index:-1;height:100%;margin:auto;width:100%;" alt="banner_midas">
 ';
 $html .= "</body></html>";
 //echo $html;

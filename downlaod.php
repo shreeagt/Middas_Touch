@@ -1,41 +1,40 @@
 <?php
 require('dompdf/autoload.inc.php');
 include('connection.php');
-$id = $_GET['id'];
-$sketch = mysqli_query($conn, "SELECT * FROM sketch s inner join lan l on s.select_language = l.lan_id where s.id=$id");
-$sketch_data = mysqli_fetch_assoc($sketch);
-$Doctor_img_path = "image_folder_for_sketch/" . $sketch_data['Doctor_image']; //echo $url;
-$logo_img_path ="image_folder_for_logo/".$sketch_data['Doctor_logo'];//print_r($sketch_data);
+// $id = $_GET['id'];
+// $sketch = mysqli_query($conn, "SELECT * FROM sketch s inner join lan l on s.select_language = l.lan_id where s.id=$id");
+// $sketch_data = mysqli_fetch_assoc($sketch);
+// $Doctor_img_path = "image_folder_for_sketch/" . $sketch_data['Doctor_image']; //echo $url;
+// $logo_img_path ="image_folder_for_logo/".$sketch_data['Doctor_logo'];//print_r($sketch_data);
 
 $html = '<html><head>
 <meta charset="UTF-8">
-
-    <style>
-    body {
-        font-family: "Arial", sans-serif;
-      }
-    .logo_image{
-        width:80px;
-        height:80px;
-    }
-    .Doctor_image{
-        width:400px;
-        height:400px;
-        filter: grayscale(100%);
-    }
-    </style>
+<style>
+*{
+    margin: 0;
+    padding:0;
+}
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAHAYATYA 24x7</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-        <img src="'. $logo_img_path.'" class="logo_image">
-        <h1>Dispensary Name:-' . $sketch_data["Dispensary_Name"] . '</h1>
-        <h1 class="" id="" >Name try this imagic library in this project :-' . $sketch_data['name'] . '</h1>
-        <h1 class="" id="" >Degree name:-' . $sketch_data['Degree_name'] . '</h1>
-        <h1 class="" id="" >Designation:-' . $sketch_data['Designation'] . '</h1>
-        <h1 class="" id="" >Location :-' . $sketch_data['Location'] . '</h1>
-        <img src="'. $Doctor_img_path .'" class="Doctor_image" style="filter: grayscale(100%);">
-        <p>' . $sketch_data['language'] . '</p>
-<body>';
+<body style="text-align: center;">
+    <div class="logo_cover" style="position:absolute;top:180px;width:100%;text-align: center;">
+    <img src="images/logo-dark.png" alt="logo" style="max-width:70px;height:auto;">
+    <h1 style="font-size: 18px;color: #2f2884;">RAVI TIWARI</h1>  
+    <h1 style="font-size: 16px;color: #2f2884;letter-spacing: 1.5px;margin-top: 10px;">EYE SPECIALIST</h1>  
+    <p style="max-width:300px;color: #2f2884;font-size:14px;margin: auto;"> B-003, Star Premier -1/B,C, Indralok Phase-5, Annapurna Estate, Bhayander(East)</p>
+    </div>
+    <img src="images/banner_midas.png" style="position:absolute;left:0;top:0;z-index:-1;height:100vh;margin:auto;width:100%;" alt="banner_midas">
+';
 $html .= "</body></html>";
+//echo $html;
 
 use Dompdf\Dompdf;
 use Dompdf\Options;
@@ -46,33 +45,21 @@ $options->set('defaultFont', 'DejaVu Sans'); // Set the default font
 
 $pdf = new Dompdf($options);
 
-//echo $html;
+// //echo $html;
 
 $pdf->loadHtml($html);
-$filename = 'my.pdf';
+// $filename = 'my.pdf';
 $pdf->render();
 
-$folder = 'C:/xamppNEW/htdocs/MIdars_touch/pdf/';
-$filename = $sketch_data['name'].'.pdf';
-$filepath = $folder . $filename;
+// $folder = 'C:/xamppNEW/htdocs/MIdars_touch/pdf/';
+$filename = 'ram.pdf';
+// $filepath = $folder . $filename;
 
-// Save the generated PDF to the specified folder
-//file_put_contents($filepath, $pdf->output());
+// // Save the generated PDF to the specified folder
+// //file_put_contents($filepath, $pdf->output());
  
-$pdfContent = $pdf->output();
-//header('Content-type: application/pdf');//echo $pdfContent;//header('Content-Disposition: attachment; filename="' . $filename . '"');//echo $pdfContent;
+// $pdfContent = $pdf->output();
+header('Content-type: application/pdf');//echo $pdfContent;//header('Content-Disposition: attachment; filename="' . $filename . '"');//echo $pdfContent;
 
 $pdf->stream($filename, ['Attachment' => false]);
-/*
-<body>
-        <img src="<?php echo $logo_img_path;?>" class="logo_image" width="50px"; height="50px";>
-        <h1>Dispensary Name:- <?php echo $sketch_data["Dispensary_Name"]; ?></h1>
-        <h1 class="" id="" >Name:-<?php echo $sketch_data['name']; ?> </h1>
-        <h1 class="" id="" >Degree name:-<?php echo $sketch_data['Degree_name'];?></h1>
-        <h1 class="" id="" >Designation:-<?php echo $sketch_data['Designation']; ?></h1>
-        <h1 class="" id="" >Location :-<?php echo $sketch_data['Location'];?></h1>
-        <p>Language:-<?php echo $sketch_data['language'];?></p>
-        <img src="<?php echo $Doctor_img_path ;?>" class="Doctor_image" style="filter: grayscale(100%);">
-<body>*/
-
 ?>

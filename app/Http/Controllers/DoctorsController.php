@@ -10,6 +10,8 @@ use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage; // Import the Storage facade
 use DB;
+use Barryvdh\DomPDF\Facade\Pdf;
+
 
 class DoctorsController extends Controller
 {
@@ -138,19 +140,13 @@ class DoctorsController extends Controller
     // You can perform additional actions here, such as sending notifications or processing the video further
     return redirect()->back()->with('success', 'Video uploaded successfully.');
 }
-    public function downloadCertificate($drid)
+    public function downloadCertificate($id)
     {
-        $fileUrl = 'Backup/download.php';
+        $doctor = Doctors::find($id); // Retrieve the doctor
 
-        // Check if the file exists
-        if (file_exists($fileUrl)) {
-            // Generate the file download response
-            header('Content-Type: application/octet-stream');
-            header('Content-Disposition: attachment; filename="' . basename($fileUrl) . '"');
-            readfile($fileUrl);
-        } else {
-            // File does not exist, handle the error (e.g., show a message or redirect)
-            echo 'File not found.';
-        }
+        $data = ['doctor' => $doctor]; // Pass the doctor variable to the view
+    
+        $pdf = Pdf::loadView('doctor_certificate', $data);
+        return $pdf->download('midas_certificate.pdf'); 
     }
 }

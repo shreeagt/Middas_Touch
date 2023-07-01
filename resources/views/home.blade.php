@@ -41,7 +41,7 @@
                <div class="col-lg-6">
                   <div class="col-lg-12">
                      <div class="banner_text ">
-                        <h1> Hello  Dr.<span style="color:brown">{{ $doctor->doctorname }} </span><br>Please Upload your video<span class="red" style="color:red">.</span> </h1>
+                        <h1> Hello  Dr.<span style="color:brown">{{ $doctor->doctorname }} </span><br>Please Upload your Handprint<span class="red" style="color:red">.</span> </h1>
                         <form action="{{ route('doctors.upload') }}" method="post" enctype="multipart/form-data">
                            <div class="mt-2">
                               @include('layouts.partials.messages')

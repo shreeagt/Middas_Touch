@@ -18,9 +18,9 @@
                         <th>Doctor Name</th>
                         <th>Degree</th>
                         <th>Designation</th>
-                        <th>Logo</th>
                         <th>Location</th>
-                        <th>Link</th>
+                        <th>Logo</th>
+                        <th>Speciality</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -45,7 +45,7 @@
                                         No Logo
                                     @endif
                                 </td>
-                                <td>{{ $doctor->email }}</td>
+                                <td>{{ $doctor->speciality }}</td>
                                 <td><a href="{{ route('doctors.link', ['doctor' => $doctor->id]) }}"
                                         class="btn btn-success">Link</td>
                                 <td>

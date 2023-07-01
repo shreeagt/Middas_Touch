@@ -28,6 +28,12 @@
     
 <script src="{{asset('assets/libs/jquery/jquery.min.js')}}"></script>
 </head>
+
+<style>
+  .logo img{
+    max-width:100px;
+  }
+</style>
 <body>
 
   <div class="wrapper">
@@ -36,13 +42,13 @@
     <div class="header__container pt20 pb20 pl30 pr30">
       <div class="row justify-between items-center">
         <div class="col-sm-4 col-xl-2">
-          <div class="text-center text-lg-start d-flex mb15-520">
+          <div class="text-center text-lg-start d-flex align-items-center mb15-520">
             <div class="fz20 me-4">
               <a href="#" class="dashboard_sidebar_toggle_icon text-thm1 vam"><i class="fa-sharp fa-solid fa-bars-staggered"></i></a>
             </div>
             <div class="dashboard_header_logo">
               {{-- <a href="/" class="logo">Instagram Videos<span class="text-thm">.</span></a> --}}
-              <a href="/" class="logo"><img src="{{asset('assets/images/instareel.png')}}" alt="logo" ></a>
+              <a href="/" class="logo"><img src="{{asset('assets/images/ajantaone-logo.png')}}" alt="logo" ></a>
             </div>
           </div>
         </div>

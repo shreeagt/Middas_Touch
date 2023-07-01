@@ -76,7 +76,7 @@ body.text-center::before{
 @section('content')
 
 <div class="logo">
-    <a href="/"><img src="{{asset('assets/images/instareel.png')}}" class="" alt="logo"></a>
+    <a href="/"><img src="{{asset('assets/images/ajantaone-logo.png')}}" class="" alt="logo"></a>
 </div>
 
     <form method="post" action="{{ route('login.perform') }}">

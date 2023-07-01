@@ -28,133 +28,47 @@
       <script src="{{asset('assets/libs/jquery/jquery.min.js')}}"></script>
    </head>
    <body>
-      <div class="banner-wrapper pt-md-0 pt-5">
-         {{-- <img src="{{asset('assets/images/ajanta-logo.png')}}" alt="logo" class="logo logoposition"> --}}
-         <img src="{{asset('assets/images/instareel.png')}}" alt="logo" class="logo logoposition">
-         <div class="container">
-            <div class="row justify-content-center align-items-center">
-               <div class="col-lg-6">
-                  <div class="img-shree-cover">
-                     <img src="{{asset('assets/images/home/doc.png')}}" style="-webkit-animation: bounceHero 5s ease-in-out infinite;" class="img-fluid" alt="docs">
-                  </div>
-               </div>
-               <div class="col-lg-6">
-                  <div class="col-lg-12">
-                     <div class="banner_text ">
-                        <h1> Hello  Dr.<span style="color:brown">{{ $doctor->doctorname }} </span><br>Please Upload your Handprint<span class="red" style="color:red">.</span> </h1>
-                        <form action="{{ route('doctors.upload') }}" method="post" enctype="multipart/form-data">
-                           <div class="mt-2">
-                              @include('layouts.partials.messages')
-                          </div>
-                           @csrf
-                           <div class="drop-zone">
-                           <input type="hidden" name="dr_id" value="{{ $doctor->id }}">
-                           <input type="hidden" name="so_id" value="{{ $doctor->soid }}">
-                              <span class="drop-zone__prompt">Drop file here or click to upload</span>
-                              <input type="file" name="handprintlogo" class="drop-zone__input">
-                           </div>
-                           <button type="submit" class="btn btn-primary mt-3">Submit</button>
-                           {{-- <button type="submit" class="btn btn-primary mt-3">Download Certificate</button> --}}
-                           <a href="{{ route('doctors.certificate', ['drid' => $doctor->id]) }}" class="btn btn-primary mt-3">Download Certificate</a>
-                        </form>
+
+      
+<div class="banner-wrapper pt-md-0 pt-5">
+   <img src="{{asset('assets/images/ajantaone-logo.png')}}" alt="logo" class="logo logoposition">
+   <div class="container h-lg-100">
+      <div class="row justify-content-center align-items-center h-lg-100">
+         <div class="col-lg-6  h-lg-100">
+            <div class="img-shree-cover  h-lg-100">
+               
+               <img src="{{asset('mob_images.png')}}" style="-webkit-animation: bounceHero 5s ease-in-out infinite;" class="img-fluid  d-block d-lg-none" alt="docs">
+               <img src="{{asset('doc.png')}}" style="-webkit-animation: bounceHero 5s ease-in-out infinite;" class="img-fluid d-none d-lg-block" alt="docs">
+            </div>
+         </div>
+
+         <div class="col-lg-6">
+            <div class="col-lg-12">
+               <div class="banner_text ">
+                  <h1> Hello  Dr.<span style="color:brown">{{ $doctor->doctorname }} </span><br>Please Upload your Handprint<span class="red" style="color:red">.</span> </h1>
+                  <form action="{{ route('doctors.upload') }}" method="post" enctype="multipart/form-data">
+                     <div class="mt-2">
+                        @include('layouts.partials.messages')
+                    </div>
+                     @csrf
+                     <div class="drop-zone">
+                     <input type="hidden" name="dr_id" value="{{ $doctor->id }}">
+                     <input type="hidden" name="so_id" value="{{ $doctor->soid }}">
+                        <span class="drop-zone__prompt">Drop file here or click to upload</span>
+                        <input type="file" name="handprintlogo" class="drop-zone__input">
                      </div>
-                  </div>
+                     <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                     {{-- <button type="submit" class="btn btn-primary mt-3">Download Certificate</button> --}}
+                     <a href="{{ route('doctors.certificate', ['drid' => $doctor->id]) }}" class="btn btn-primary mt-3">Download Certificate</a>
+                  </form>
                </div>
             </div>
          </div>
       </div>
-      <div class="timeline-cover pt-4">
-         <div class="text-center">
-            <img src="{{asset('assets/images/ajanta-logo.png')}}" alt="logo" class="logo">
-            <h1>ENHANCE YOUR DIGITAL PRESENCE<br>WITH<br>AJANTA PHARMA LIMITED!</h1>
-         </div>
-         <div class="timeline mt-5">
-            <div class="timeline__item">
-               <div class="timeline__image">
-                  <img src="{{asset('assets/images/home/2.png')}}" alt="Image 1">
-               </div>
-               <div class="timeline__content">
-                  <h3>1.Amplify Your
-                     Online Influence
-                  </h3>
-                  <p>Our Social Media Manager will skyrocket
-                     your online presence, positioning you as
-                     the go-to eye specialist in your area.
-                  </p>
-               </div>
-            </div>
-            <div class="timeline__item">
-               <div class="timeline__image">
-                  <img src="{{asset('assets/images/home/3.png')}}" alt="Image 2">
-               </div>
-               <div class="timeline__content">
-                  <h3>2.Expand Your
-                     Patient Network
-                  </h3>
-                  <p>Tap into a vast pool of potential patients through
-                     targeted social media strategies, allowing you to
-                     grow your practice and increase appointments
-                  </p>
-               </div>
-            </div>
-            <div class="timeline__item">
-               <div class="timeline__image">
-                  <img src="{{asset('assets/images/home/4.png')}}" alt="Image 3">
-               </div>
-               <div class="timeline__content">
-                  <h3>3.Engage and
-                     Educate
-                  </h3>
-                  <p>Our expert will captivate your audience with
-                     compelling content, delivering valuable eye care
-                     information that establishes you as a trusted authority.
-                  </p>
-               </div>
-            </div>
-            <div class="timeline__item">
-               <div class="timeline__image">
-                  <img src="{{asset('assets/images/home/5.png')}}" alt="Image 4">
-               </div>
-               <div class="timeline__content">
-                  <h3>4.Time-Efficient
-                     Solution
-                  </h3>
-                  <p>Let our Social Media Manager handle the complexities
-                     of social media, freeing up your valuable time to focus
-                     on delivering exceptional patient care.
-                  </p>
-               </div>
-            </div>
-            <div class="timeline__item">
-               <div class="timeline__image">
-                  <img src="{{asset('assets/images/home/6.png')}}" alt="Image 5">
-               </div>
-               <div class="timeline__content">
-                  <h3>5.Ignite Patient
-                     Loyalty
-                  </h3>
-                  <p>Let our Social Media Manager handle the complexities
-                     of social media, freeing up your valuable time to focus
-                     on delivering exceptional patient care.
-                  </p>
-               </div>
-            </div>
-            <div class="timeline__item">
-               <div class="timeline__image">
-                  <img src="{{asset('assets/images/home/7.png')}}" alt="Image 6">
-               </div>
-               <div class="timeline__content">
-                  <h3>6.Stay Ahead of
-                     Competitors
-                  </h3>
-                  <p>With our cutting-edge social media strategies, you'll outshine
-                     your competition, staying at the forefront of the ever-evolving
-                     digital landscape.
-                  </p>
-               </div>
-            </div>
-         </div>
-      </div>
+   </div>
+</div>
+</form>
+
       <script>
          document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
            const dropZoneElement = inputElement.closest(".drop-zone");

@@ -35,10 +35,7 @@
                 <label for="speciality">Speciality:</label>
                 <input type="speciality" name="speciality" class="form-control" value="{{ $doctor->speciality }}">
             </div>
-            <div class="form-group">
-                <label for="handprintlogo">Handprint Logo</label>
-                <input type="file" name="handprintlogo" class="form-control" value="handprintlogo">
-            </div>
+           
             <!-- <div class="form-group">
                 <label for="role">Role:</label>
                 <input type="text" name="role" id="role" class="form-control" value="{{ $doctor->role }}">

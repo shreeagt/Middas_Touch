@@ -37,10 +37,6 @@ class DoctorsController extends Controller
     if ($request->hasFile('logo')) {
         $logoPath = $request->file('logo')->getClientOriginalName();
         $request->file('logo')->move($folderPath, $logoPath);
-        $logo = $request->file('logo');
-        // $logoPath = $logo->storeAs('logos', 'logo.png');
-        
-        // Save the file path or URL to your model or database if needed
         $idoctor->logo = $logoPath;
     }
 
@@ -93,14 +89,7 @@ class DoctorsController extends Controller
             $doctor->logo = $logoPath;
         }
 
-        if ($request->hasFile('handprintlogo')) {
-            $handprintlogoPath = $request->file('handprintlogo')->getClientOriginalName();
-            $request->file('handprintlogo')->move($folderPath, $handprintlogoPath);
-            $handprintlogo = $request->file('handprintlogo');
-            
-            // Save the file path or URL to your model or database if needed
-            $doctor->handprintlogo = $handprintlogoPath;
-        }
+        
 
     // Retrieve the soid from the users table and assign it to the soid column of the Doctors model
     $soid = Auth::id();
@@ -138,7 +127,7 @@ class DoctorsController extends Controller
     // $queries = DB::getQueryLog();// dd($queries);
 
     // You can perform additional actions here, such as sending notifications or processing the video further
-    return redirect()->back()->with('success', 'Video uploaded successfully.');
+    return redirect()->back()->with('success', 'Handprint uploaded successfully.');
 }
     public function downloadCertificate($id)
     {

@@ -127,7 +127,9 @@ class DoctorsController extends Controller
     // $queries = DB::getQueryLog();// dd($queries);
 
     // You can perform additional actions here, such as sending notifications or processing the video further
-    return redirect()->back()->with('success', 'Certificate uploaded successfully.');
+    // return redirect()->back()->with('success', 'Certificate uploaded successfully.');
+    return redirect()->route('doctors.thankyou', ['id' => $video->drid]);
+
 }
     public function downloadCertificate($id)
     {

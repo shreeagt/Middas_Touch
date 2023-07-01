@@ -59,7 +59,7 @@
                      </div>
                      <button type="submit" class="btn btn-primary mt-3">Submit</button>
                      {{-- <button type="submit" class="btn btn-primary mt-3">Download Certificate</button> --}}
-                     <a href="{{ route('doctors.certificate', ['drid' => $doctor->id]) }}" class="btn btn-primary mt-3">Download Certificate</a>
+                     {{-- <a href="{{ route('doctors.certificate', ['drid' => $doctor->id]) }}" class="btn btn-primary mt-3">Download Certificate</a> --}}
                   </form>
                </div>
             </div>

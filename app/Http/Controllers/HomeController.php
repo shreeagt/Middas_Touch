@@ -48,6 +48,16 @@ class HomeController extends Controller
         //
     }
 
+
+    public function thank($id)
+    {
+            
+        // $video = DB::table('videos')->where('id', $id)->select('id', 'outputvideo')->first();
+    
+        return view('home.thank');    
+    
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

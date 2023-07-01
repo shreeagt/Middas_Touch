@@ -153,8 +153,9 @@ video#videoPlayer {
                 </div>
 
     <p style="color:#fff;font-size:20px;">Our team will respond with an interactive video that you may share on social media.</p>
-    <a href="{{ route('doctors.certificate', ['drid' => $doctor->id]) }}" class="btn btn-primary mt-3">Download Certificate</a>
+    {{-- <a href="{{ route('doctors.certificate', ['drid' => $doctor->id]) }}" class="btn btn-primary mt-3">Download Certificate</a> --}}
     {{-- <a href="{{ route('doctors.certificate', ['drid' => $drid]) }}" class="btn btn-primary mt-3">Download Certificate</a> --}}
+    <a href="{{ route('doctors.certificate', ['drid' => $video->drid]) }}" class="btn btn-primary mt-3">Download Certificate</a> 
 
         </div>
     </div>

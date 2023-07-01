@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Models\Doctors;
+use App\Models\Handprint;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -51,11 +54,11 @@ class HomeController extends Controller
 
     public function thank($id)
     {
-            
-        // $video = DB::table('videos')->where('id', $id)->select('id', 'outputvideo')->first();
-    
-        return view('home.thank');    
-    
+        // Retrieve the video using the provided ID
+        $video = Handprint::find($id);
+
+        // Pass the video to the view if necessary
+        return view('home.thank', ['video' => $video]);
     }
 
     /**

@@ -12,6 +12,15 @@
     body{
         font-family: 'Open Sans', sans-serif;
     }
+
+    a.btn.btn-primary.mt-3 {
+    padding: 10px;
+    text-decoration: none;
+    background: #05ab93;
+    color: #fff;
+    border-radius: 10px;
+}
+
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
     /* Default button styles */
     .download-button {
@@ -67,7 +76,7 @@
     align-items: center;
         /* background-color: rgb(0, 0, 0); */
         position: relative;
-    background-image: url('/assets/images/thank_desk.png');
+        background-image: url('/assets/images/video_homebanner.png');
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
@@ -112,7 +121,7 @@
 .logo{
     position: absolute;
     top: 10px;
-    left: 10px;
+    right: 10px;
     z-index: 4;
 }
 
@@ -135,14 +144,14 @@ video#videoPlayer {
 
 @media screen and (max-width: 768px){
     .thank_banner {
-    background-image: url('/assets/images/thankyou_banner.png');
+    background-image: url('/vide_banner_mob.jpg');
 }
 }
 </style>
 <body>
 
     <a href="/" class="logo">
-        <img src="{{asset('assets/images/instareel.png')}}">
+        <img src="{{asset('assets/images/ajantaone-logo.png')}}">
       </a>
 
     <div class="thank_banner">
@@ -152,7 +161,7 @@ video#videoPlayer {
                     <span><i class="fa fa-check" style="font-size:36px"></i></span>
                 </div>
 
-    <p style="color:#fff;font-size:20px;">Our team will respond with an interactive video that you may share on social media.</p>
+   <p style="color:#fff;margin-bottom:20px;">Grateful for 50 Years of Healing Hands: Thank You for Your Dedication and Excellence!</p>
     {{-- <a href="{{ route('doctors.certificate', ['drid' => $doctor->id]) }}" class="btn btn-primary mt-3">Download Certificate</a> --}}
     {{-- <a href="{{ route('doctors.certificate', ['drid' => $drid]) }}" class="btn btn-primary mt-3">Download Certificate</a> --}}
     <a href="{{ route('doctors.certificate', ['drid' => $video->drid]) }}" class="btn btn-primary mt-3">Download Certificate</a> 

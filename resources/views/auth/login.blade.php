@@ -23,7 +23,7 @@ body.text-center {
 }
 
 .logo{
-    max-width: 100px;
+    max-width: 150px;
     position: absolute;
     top:10px;
     right:10px;
@@ -53,7 +53,7 @@ body.text-center::before{
 @media screen and (max-width : 992px){
     body.text-center {
     position: relative;
-      background-image: url('/assets/images/home/background.png');
+    background-image: url('/vide_banner_mob.jpg');
 
 }
 

@@ -50,9 +50,19 @@
                 </div>
 
                 <div class="mb-3">
+                    <label for="mci">Mci Registration Number</label>
+                    <input type="text" name="mci" class="form-control" placeholder="Mci Registration Number" required>
+                </div>
+
+                <div class="mb-3">
                   <label for="logo" >Select Logo Image</label>
                   <input type="file" name="logo" class="form-control" placeholder="Logo" required>
                 </div>
+
+                <div class="mb-3">
+                    <label for="photo" >Dr. Photo</label>
+                    <input type="file" name="photo" class="form-control" placeholder="Dr. Photo" required>
+                  </div>
                
 
                 <button type="submit" class="btn btn-success">Save Doctor</button>

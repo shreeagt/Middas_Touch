@@ -19,8 +19,11 @@
                         <th>Degree</th>
                         <th>Designation</th>
                         <th>Location</th>
+                        <th>Mci Registration Number</th>
                         <th>Logo</th>
+                        <th>Dr. Photo</th>
                         <th>Speciality</th>
+                        <th>Link</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -37,6 +40,7 @@
                                 <td>{{ $doctor->degree }}</td>
                                 <td>{{ $doctor->designation }}</td>
                                 <td>{{ $doctor->location }}</td>
+                                <td>{{ $doctor->mci }}</td>
                                 <td>
                                     @if ($doctor->logo)
                                         <img src="{{ asset('logos/' . $doctor->logo) }}" alt="Logo" width="50"
@@ -45,6 +49,11 @@
                                         No Logo
                                     @endif
                                 </td>
+                                <td>@if ($doctor->photo)
+                                    <img src="{{ asset('photos/'.$doctor->photo) }}" alt="Logo" width="50" height="50">
+                                @else
+                                    No Logo
+                                @endif</td>
                                 <td>{{ $doctor->speciality }}</td>
                                 <td><a href="{{ route('doctors.link', ['doctor' => $doctor->id]) }}"
                                         class="btn btn-success">Link</td>

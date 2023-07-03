@@ -28,8 +28,16 @@
                 <input type="location" name="location" class="form-control" value="{{ $doctor->location }}">
             </div>
             <div class="form-group">
+                <label for="mci">Mci Registration Number</label>
+                <input type="mci" name="mci" id="mci" class="form-control" value="{{ $doctor->mci }}">
+            </div>
+            <div class="form-group">
                 <label for="logo">Logo</label>
                 <input type="file" name="logo" id="logo" class="form-control" value="logo">
+            </div>
+            <div class="form-group">
+                <label for="photo">Dr. Photo</label>
+                <input type="file" name="photo" id="photo" class="form-control" value="photo">
             </div>
             <div class="form-group">
                 <label for="speciality">Speciality:</label>

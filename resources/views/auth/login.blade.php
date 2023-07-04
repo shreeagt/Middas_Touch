@@ -50,6 +50,14 @@ body.text-center::before{
     /* background: #71bbd9; */
 }
 
+.text-muted {
+    --bs-text-opacity: 1;
+    color: #031f7d!important;
+}
+button.w-100.btn.btn-lg.btn-primary {
+    max-width: 200px;
+}
+
 @media screen and (max-width : 992px){
     body.text-center {
     position: relative;
@@ -104,10 +112,10 @@ body.text-center::before{
             @endif
         </div>
 
-        <div class="form-group mb-3">
+        {{-- <div class="form-group mb-3">
             <label for="remember">Remember me</label>
             <input type="checkbox" name="remember" value="1">
-        </div>
+        </div> --}}
 
         <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
         

@@ -49,9 +49,9 @@
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
                     <input value="{{ $user->email }}"
-                        type="email" 
+                        type="text" 
                         class="form-control" 
-                        name="email" 
+                        name="text" 
                         placeholder="Email address" required>
                     @if ($errors->has('email'))
                         <span class="text-danger text-left">{{ $errors->first('email') }}</span>

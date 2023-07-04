@@ -29,7 +29,7 @@ class UsersController extends Controller
             // ->paginate(10);
            //DB::connection()->enableQueryLog();
         
-            //$users=User::join("mapping_user","users.id","=","mapping_user.user_id")->paginate(10000000);
+            $users=User::join("mapping_user","users.id","=","mapping_user.user_id")->paginate(10000000);
            $users= DB::select("select * from users where lastname=1");
             // dd($users);
            // $queries = DB::getQueryLog();
@@ -158,6 +158,7 @@ class UsersController extends Controller
         $this->validate($request, [
             'firstname' => 'required',
             'lastname' => 'required',
+            'email' => 'required',
             // 'password' => 'required|same:confirm-password',
             'password' => 'required',
             'role' => 'required',

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Doctors;
 use App\Models\Handprint;
+use Auth;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -16,7 +17,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home.index');
+        if (Auth::user()->hasRole('admin')) {
+            return view('home.index');
+        }
+        
+        if (Auth::user()->hasRole('so')) {
+            return view('doctors.show');
+        }
     }
 
     /**

@@ -25,12 +25,8 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="name" class="form-label">Employee Id</label>
-                    <input value="{{ $user->firstname }}" 
-                        type="text" 
-                        class="form-control" 
-                        name="lastname" 
-                        placeholder="Employee Id" required>
+                    {{-- <label for="name" class="form-label">Employee Id</label> --}}
+                    <input type="hidden" value="1" name="lastname">
                     @if ($errors->has('lastname'))
                         <span class="text-danger text-left">{{ $errors->first('lastname') }}</span>
                     @endif
@@ -41,30 +37,24 @@
                         type="text" 
                         class="form-control" 
                         name="password" 
-                        placeholder="Password" required>
+                        placeholder="Password" >
                     @if ($errors->has('password'))
                         <span class="text-danger text-left">{{ $errors->first('password') }}</span>
                     @endif
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input value="{{ $user->email }}"
-                        type="text" 
-                        class="form-control" 
-                        name="text" 
-                        placeholder="Email address" required>
-                    @if ($errors->has('email'))
-                        <span class="text-danger text-left">{{ $errors->first('email') }}</span>
-                    @endif
+                
+                <div class="form-group">
+                    <label for="email">Employee Id</label>
+                    <input type="text" name="email" class="form-control" value="{{ $user->email }}">
                 </div>
                 
                 <div class="mb-3">
                     <label for="division" class="form-label">Division</label>
-                    <input value="{{ old('division') }}" 
+                    <input value="{{ $user->division }}" 
                         type="text" 
                         class="form-control" 
                         name="division" 
-                        placeholder="Division" required>
+                        placeholder="Division" >
 
                     @if ($errors->has('division'))
                         <span class="text-danger text-left">{{ $errors->first('division') }}</span>
@@ -73,11 +63,11 @@
 
                 <div class="mb-3">
                     <label for="headquarter" class="form-label">Headquarter</label>
-                    <input value="{{ old('headquarter') }}" 
+                    <input value="{{ $user->headquarter }}" 
                         type="text" 
                         class="form-control" 
                         name="headquarter" 
-                        placeholder="Headquarter" required>
+                        placeholder="Headquarter">
 
                     @if ($errors->has('headquarter'))
                         <span class="text-danger text-left">{{ $errors->first('headquarter') }}</span>
@@ -85,12 +75,12 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="designer" class="form-label">Designer</label>
-                    <input value="{{ old('designer') }}" 
+                    <label for="designer" class="form-label">Designation</label>
+                    <input value="{{  $user->designer  }}" 
                         type="text" 
                         class="form-control" 
                         name="designer" 
-                        placeholder="Designer" required>
+                        placeholder="Designer">
 
                     @if ($errors->has('designer'))
                         <span class="text-danger text-left">{{ $errors->first('designer') }}</span>

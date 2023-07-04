@@ -1,7 +1,7 @@
 <style>
   a.active{
     background-color: #DDF2FA;
-    color: #041E42;
+    color: #102a83;
   }
 </style>
 <div class="dashboard_content_wrapper">

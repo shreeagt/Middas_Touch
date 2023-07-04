@@ -151,12 +151,13 @@ class DoctorsController extends Controller
     $video = new Handprint();
     
     if ($request->hasFile('handprintlogo')) {
-        $handprintlogoPath = $request->file('handprintlogo')->getClientOriginalName();
-        $request->file('handprintlogo')->move($folderPath, $handprintlogoPath);
         $handprintlogo = $request->file('handprintlogo');
+        $handprintlogoPath = $handprintlogo->getClientOriginalExtension();
+        $handprintlogoName = uniqid().'.'.$handprintlogoPath;
+        $handprintlogo->move($folderPath, $handprintlogoName);
         
         // Save the file path or URL to your model or database if needed
-        $video->handprintlogo = $handprintlogoPath;
+        $video->handprintlogo = $handprintlogoName;
     }
 
     // Assign the 'drid' value to the 'drid' column of the 'Videos' model

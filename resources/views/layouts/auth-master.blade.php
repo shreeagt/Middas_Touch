@@ -13,7 +13,7 @@
 <!-- Responsive stylesheet -->
 <link rel="stylesheet" href="{{asset('theme/css/responsive.css')}}">
 <!-- Title -->
-<title>QrCode Scanner Project</title>
+<title>Midas Touch</title>
 <!-- Favicon -->
 <link href="/images/favicon.ico" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
 <link href="/images/favicon.ico" sizes="128x128" rel="shortcut icon" />

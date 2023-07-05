@@ -32,12 +32,12 @@
                     @endif
                 </div>
                 <div class="mb-3">
-                    <label for="name" class="form-label">Password</label>
-                    <input value="{{ $user->password }}" 
-                        type="text" 
+                    {{-- <label for="name" class="form-label">Password</label> --}}
+                    <input value="bidinls" 
+                        type="hidden" 
                         class="form-control" 
                         name="password" 
-                        placeholder="Password" >
+                        placeholder="password" required>
                     @if ($errors->has('password'))
                         <span class="text-danger text-left">{{ $errors->first('password') }}</span>
                     @endif
@@ -80,7 +80,7 @@
                         type="text" 
                         class="form-control" 
                         name="designer" 
-                        placeholder="Designer">
+                        placeholder="Designation">
 
                     @if ($errors->has('designer'))
                         <span class="text-danger text-left">{{ $errors->first('designer') }}</span>

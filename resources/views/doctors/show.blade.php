@@ -14,10 +14,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Dispensary Name</th>
                         <th>Doctor Name</th>
-                        <th>Degree</th>
-                        <th>Designation</th>
                         <th>Location</th>
                         <th>Mci Registration Number</th>
                         <th>Logo</th>
@@ -31,15 +28,12 @@
                     @php
                         $i = 1;
                     @endphp
-                    @if (isset($doctors[0]->dispensaryname) != '')
+                    @if (isset($doctors[0]->doctorname) != '')
                         @foreach ($doctors as $doctor)
                             <tr>
                                 <td>{{ $i }}</td>
-                                <td>{{ $doctor->dispensaryname }}</td>
                                 <td>{{ $doctor->doctorname }}</td>
-                                <td>{{ $doctor->degree }}</td>
-                                <td>{{ $doctor->designation }}</td>
-                                <td>{{ $doctor->location }}</td>
+                                 <td>{{ $doctor->location }}</td>
                                 <td>{{ $doctor->mci }}</td>
                                 <td>
                                     @if ($doctor->logo)

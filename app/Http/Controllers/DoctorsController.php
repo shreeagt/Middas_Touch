@@ -32,10 +32,7 @@ class DoctorsController extends Controller
     }
 
     $idoctor = new Doctors;
-    $idoctor->dispensaryname = $request->input('dispensaryname');
     $idoctor->doctorname = $request->input('doctorname');
-    $idoctor->degree = $request->input('degree');
-    $idoctor->designation = $request->input('designation');
     $idoctor->location = $request->input('location');
     $idoctor->speciality = $request->input('speciality');
     $idoctor->mci = $request->input('mci');
@@ -101,10 +98,7 @@ class DoctorsController extends Controller
             mkdir($FolderPath, 0777, true);
         }
         // Update the doctor's details based on the form input
-        $doctor->dispensaryname = $request->input('dispensaryname');
         $doctor->doctorname = $request->input('doctorname');
-        $doctor->degree = $request->input('degree');
-        $doctor->designation = $request->input('designation');
         $doctor->location = $request->input('location');
         $doctor->speciality = $request->input('speciality');
         $doctor->mci = $request->input('mci');

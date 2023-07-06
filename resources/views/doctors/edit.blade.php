@@ -8,20 +8,8 @@
             @csrf
             @method('PUT')
             <div class="form-group">
-                <label for="dispensaryname">Dispensary Name</label>
-                <input type="text" name="dispensaryname" class="form-control" value="{{ $doctor->dispensaryname }}">
-            </div>
-            <div class="form-group">
                 <label for="doctorname">Doctor Name:</label>
                 <input type="text" name="doctorname" class="form-control" value="{{ $doctor->doctorname }}">
-            </div>
-            <div class="form-group">
-                <label for="degree">Degree</label>
-                <input type="contacno" name="degree" class="form-control" value="{{ $doctor->degree }}">
-            </div>
-            <div class="form-group">
-                <label for="designation">Designation</label>
-                <input type="designation" name="designation" class="form-control" value="{{ $doctor->designation }}">
             </div>
             <div class="form-group">
                 <label for="location">Location</label>
@@ -40,10 +28,17 @@
                 <input type="file" name="photo" id="photo" class="form-control" value="photo">
             </div>
             <div class="form-group">
-                <label for="speciality">Speciality:</label>
-                <input type="speciality" name="speciality" class="form-control" value="{{ $doctor->speciality }}">
+                <label for="speciality">Speciality</label>
+                <select name="speciality" id="speciality" class="form-control">
+                    <option value="">Select Speciality</option>
+                    <option value="General Opthamologist" {{ $doctor->speciality == 'General Opthamologist' ? 'selected' : '' }}>General Opthamologist</option>
+                    <option value="Retina Specialist" {{ $doctor->speciality == 'Retina Specialist' ? 'selected' : '' }}>Retina Specialist</option>
+                    <option value="Cornea Specialist" {{ $doctor->speciality == 'Cornea Specialist' ? 'selected' : '' }}>Cornea Specialist</option>
+                    <option value="Glaucoma Specialist" {{ $doctor->speciality == 'Glaucoma Specialist' ? 'selected' : '' }}>Glaucoma Specialist</option>
+                    <option value="Optometrist" {{ $doctor->speciality == 'Optometrist' ? 'selected' : '' }}>Optometrist</option>
+                </select>
             </div>
-           
+
             <!-- <div class="form-group">
                 <label for="role">Role:</label>
                 <input type="text" name="role" id="role" class="form-control" value="{{ $doctor->role }}">

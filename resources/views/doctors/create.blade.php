@@ -7,36 +7,8 @@
             <form method="POST" action="{{route('doctors.insert')}}" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                     <label for="dispensaryname">Dispensary Name:-</label>
-                     <input type="text" name="dispensaryname" class="form-control" placeholder="Dispensary Name" required>
-                </div>
-
-                <div class="mb-3">
                   <label for="doctorname">Doctor Name :-</label>
                   <input type="text" name="doctorname" class="form-control" placeholder="Doctor Name" required>
-                </div>
-
-               
-                <div class="mb-3">
-                  <label for="degree">Degree :-</label>
-                  <input type="text" name="degree" class="form-control" placeholder="Degree Name" required>
-                </div>
-
-
-                <div class="mb-3">
-                  <label for="select_language_pro">Select Language</label>
-                  <select name="select_language" class="form-control" required>
-                     <option value="">Select language</option>
-                     <option value="1">English</option>
-                     <option value="2">Hindi</option>
-                     <option value="3">Marathi</option>
-                     <option value="4">Gujrati</option>
-                 </select>
-                </div>
-
-                <div class="mb-3">
-                  <label for="designation">Designation:-</label>
-                  <input type="text" name="designation" class="form-control" placeholder="Designation" required>
                 </div>
 
                 <div class="mb-3">
@@ -45,9 +17,16 @@
                 </div>
 
                 <div class="mb-3">
-                        <label for="speciality">Speciality</label>
-                        <input type="text" name="speciality" class="form-control" placeholder="Speciality" required>
-                </div>
+                  <label for="speciality" class="form-label">Speciality</label>
+                  <select class="form-control" name="speciality" required>
+                      <option value="">Select Speciality</option>
+                      <option value="General Opthamologist" {{ old('speciality') == 'General Opthamologist' ? 'selected' : '' }}>General Opthamologist</option>
+                      <option value="Retina Specialist" {{ old('speciality') == 'Retina Specialist' ? 'selected' : '' }}>Retina Specialist</option>
+                      <option value="Cornea Specialist" {{ old('speciality') == 'Cornea Specialist' ? 'selected' : '' }}>Cornea Specialist</option>
+                      <option value="Glaucoma Specialist" {{ old('speciality') == 'Glaucoma Specialist' ? 'selected' : '' }}>Glaucoma Specialist</option>
+                      <option value="Optometrist" {{ old('speciality') == 'Optometrist' ? 'selected' : '' }}>Optometrist</option>
+                  </select>
+              </div>
 
                 <div class="mb-3">
                     <label for="mci">Mci Registration Number</label>

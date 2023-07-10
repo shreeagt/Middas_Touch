@@ -87,7 +87,7 @@ button.w-100.btn.btn-lg.btn-primary {
 <div class="logo">
     <a href="/"><img src="{{asset('assets/images/ajantaone-logo.png')}}" class="" alt="logo"></a>
 </div>
-
+    <h1>Midas Touch</h1>
     <form method="post" action="{{ route('login.perform') }}">
         
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />

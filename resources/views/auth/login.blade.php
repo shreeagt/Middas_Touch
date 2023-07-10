@@ -12,7 +12,7 @@ height: 100vh;
 body.text-center {
     position: relative;
       /* background-image: url('/assets/images/video_homebanner.png'); */
-      background-image: url('/assets/images/desktop_banner.jpg');
+      background-image: url('assets/images/video_homebanner.gif');
       background-repeat: no-repeat;
       background-position-y: center;
       background-position-x: center;
@@ -62,7 +62,7 @@ button.w-100.btn.btn-lg.btn-primary {
 @media screen and (max-width : 992px){
     body.text-center {
     position: relative;
-    background-image: url('/vide_banner_mob.jpg');
+    background-image: url('assets/images/vide_banner_mob.gif');
 
 }
 

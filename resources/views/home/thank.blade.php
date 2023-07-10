@@ -76,7 +76,7 @@
     align-items: center;
         /* background-color: rgb(0, 0, 0); */
         position: relative;
-        background-image: url('/assets/images/video_homebanner.jpg');
+        background-image: url('/assets/images/video_homebanner.gif');
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
@@ -144,7 +144,7 @@ video#videoPlayer {
 
 @media screen and (max-width: 768px){
     .thank_banner {
-    background-image: url('/vide_banner_mob.jpg');
+    background-image: url('/assets/images/vide_banner_mob.gif');
 }
 }
 </style>

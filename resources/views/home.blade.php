@@ -93,6 +93,17 @@
     .hidden {
       display: none; /* Hide the element */
     }
+
+    @media screen and (max-width:600px){
+      .banner_text h1 {
+            font-size: 21px;
+        }
+
+        .image-container {
+            width: 80vw;
+            height: 56vh;
+        }
+    }
       </style>
 <div class="banner-wrapper pt-md-0 pt-5">
    <img src="{{asset('assets/images/ajantaone-logo.png')}}" alt="logo" class="logo logoposition">

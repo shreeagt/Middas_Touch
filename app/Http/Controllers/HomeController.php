@@ -62,8 +62,8 @@ class HomeController extends Controller
     public function thank($id)
     {
         // Retrieve the video using the provided ID
-        $video = Handprint::find($id);
-
+        // $video = Handprint::find($id);
+        $video = Doctors::find($id);
         // Pass the video to the view if necessary
         return view('home.thank', ['video' => $video]);
     }

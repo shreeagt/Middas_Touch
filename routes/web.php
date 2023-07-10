@@ -81,7 +81,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 Route::group(['namespace' => 'App\Http\Controllers'], function() {
         Route::get('/doctors/home/{doctor}', 'DoctorsController@link')->name('doctors.link');
         Route::post('/doctors/upload', 'DoctorsController@upload')->name('doctors.upload');
-        Route::get('/doctors/certificate/{drid}', 'DoctorsController@downloadCertificate')->name('doctors.certificate');
+        Route::get('/doctors/certificate/{id}', 'DoctorsController@downloadCertificate')->name('doctors.certificate');
         Route::get('/thank_you/{id}', 'HomeController@thank')->name('doctors.thankyou');
     });
 

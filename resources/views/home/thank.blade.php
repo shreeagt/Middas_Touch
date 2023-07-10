@@ -76,7 +76,7 @@
     align-items: center;
         /* background-color: rgb(0, 0, 0); */
         position: relative;
-        background-image: url('/assets/images/video_homebanner.png');
+        background-image: url('/assets/images/video_homebanner.jpg');
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
@@ -161,10 +161,10 @@ video#videoPlayer {
                     <span><i class="fa fa-check" style="font-size:36px"></i></span>
                 </div>
 
-   <p style="color:#fff;margin-bottom:20px;">Grateful for 50 Years of Healing Hands: Thank You for Your Dedication and Excellence!</p>
+   <p style="color:#fff;margin-bottom:20px;">Expressing heartfelt gratitude to the healing hands that have touched countless lives for 50 remarkable years.</p>
     {{-- <a href="{{ route('doctors.certificate', ['drid' => $doctor->id]) }}" class="btn btn-primary mt-3">Download Certificate</a> --}}
     {{-- <a href="{{ route('doctors.certificate', ['drid' => $drid]) }}" class="btn btn-primary mt-3">Download Certificate</a> --}}
-    <a href="{{ route('doctors.certificate', ['drid' => $video->drid]) }}" class="btn btn-primary mt-3">Download Certificate</a> 
+    <a href="{{ route('doctors.certificate', ['id' => $video->id]) }}" class="btn btn-primary mt-3">Download Certificate</a> 
 
         </div>
     </div>

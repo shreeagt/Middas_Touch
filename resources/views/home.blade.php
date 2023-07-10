@@ -29,24 +29,99 @@
    </head>
    <body>
 
-      
+      <style>
+        .banner_text h1 {
+            font-size: 25px;
+        }
+
+        .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .image-container:hover {
+      border: 2px solid red; /* Change the border style as desired */
+    }
+
+    /* .image-container img {
+      display: block;
+      width: 100%;
+      height: auto;
+    } */
+
+    .image-container {
+    position: relative;
+    width: 35vh;
+    height: 50vh;
+    /* border: 1px dashed  #362d5f;
+    display: inline-block; */
+
+}
+
+.disabled{
+  pointer-events: none;
+    opacity: 0.5;
+}
+
+.image-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    /* display: inline-block; */
+    border: 2px dashed ;
+    transition: border-color 0.5s;
+}
+
+    .image-container.highlight {
+      border-color: #102a83; /* Change the border color to highlight */
+    }
+
+    /* .image-container img {
+      display: block;
+      width: 100%;
+      height: auto;
+    } */
+
+    .image-container img {
+      display: block;
+      width: auto;
+      height: 100%;
+    }
+
+    
+    .hidden {
+      display: none; /* Hide the element */
+    }
+      </style>
 <div class="banner-wrapper pt-md-0 pt-5">
    <img src="{{asset('assets/images/ajantaone-logo.png')}}" alt="logo" class="logo logoposition">
    <div class="container h-lg-100">
       <div class="row justify-content-center align-items-center h-lg-100">
-         <div class="col-lg-6  h-lg-100">
+         {{-- <div class="col-lg-6  h-lg-100">
             <div class="img-shree-cover  h-lg-100">
                
                <img src="{{asset('mob_images.png')}}" style="-webkit-animation: bounceHero 5s ease-in-out infinite;" class="img-fluid  d-block d-lg-none" alt="docs">
                <img src="{{asset('doc.png')}}" style="-webkit-animation: bounceHero 5s ease-in-out infinite;" class="img-fluid d-none d-lg-block" alt="docs">
             </div>
-         </div>
+         </div> --}}
 
-         <div class="col-lg-6">
+         {{-- <div class="col-lg-6"> --}}
+         <div class="col-lg-8">
             <div class="col-lg-12">
                <div class="banner_text ">
-                  <h1> Hello  Dr.<span style="color:brown">{{ $doctor->doctorname }} </span><br>Please Upload your Handprint<span class="red" style="color:red">.</span> </h1>
-                  <form action="{{ route('doctors.upload') }}" method="post" enctype="multipart/form-data">
+                  {{-- <h1> Hello  Dr.<span style="color:brown">{{ $doctor->doctorname }} </span><br>Please Upload your Handprint<span class="red" style="color:red">.</span> </h1> --}}
+                  <div>
+                  <h1> Hello  Dr.<span style="color:#fff">{{ $doctor->doctorname }} </span><br>Your healing hands heal millions of patients </h1>
+
+                  <button type="submit" class="btn btn-primary mb-2" id="btnimge" onclick="showImageContainer()">Scan</button>
+                </div>
+                  <div class="image-container d-none" id="imgcontainer" onclick="showImage()">
+                    <p id="palm-text" style="color:#fff">Place your palm</p>
+                    <input type="hidden" name="dr_id" value="{{ $doctor->id }}">
+                    <img src="{{asset('hand_scanner.gif')}}" class="d-none" id="img-scanner" alt="GIF Image">
+                  </div>
+                  {{-- <form action="{{ route('doctors.upload') }}" method="post" enctype="multipart/form-data">
                      <div class="mt-2">
                         @include('layouts.partials.messages')
                     </div>
@@ -58,9 +133,7 @@
                         <input type="file" name="handprintlogo" class="drop-zone__input">
                      </div>
                      <button type="submit" class="btn btn-primary mt-3">Submit</button>
-                     {{-- <button type="submit" class="btn btn-primary mt-3">Download Certificate</button> --}}
-                     {{-- <a href="{{ route('doctors.certificate', ['drid' => $doctor->id]) }}" class="btn btn-primary mt-3">Download Certificate</a> --}}
-                  </form>
+                  </form> --}}
                </div>
             </div>
          </div>
@@ -69,7 +142,43 @@
 </div>
 </form>
 
-      <script>
+<script>
+  function showImageContainer() {
+    var imageContainer = document.getElementById("imgcontainer");
+    imageContainer.classList.remove("d-none");
+    imageContainer.classList.add("highlight");
+  }
+</script>
+
+<script>
+  // function showImage() {
+  //   var image = document.getElementById("img-scanner");
+  //   var palmText = document.getElementById("palm-text");
+  //   var imageContainer = document.getElementById("imgcontainer");
+
+  //   image.classList.remove("d-none");
+  //   palmText.classList.add("hidden");
+  //   imageContainer.classList.add("highlight");
+  // }
+
+  function showImage() {
+      var image = document.getElementById("img-scanner");
+      var palmText = document.getElementById("palm-text");
+      var imageContainer = document.getElementById("imgcontainer");
+      var drId = document.getElementsByName("dr_id")[0].value;
+
+      image.classList.remove("d-none");
+      palmText.classList.add("hidden");
+      imageContainer.classList.add("highlight");
+
+      setTimeout(function() {
+        window.location.href = "/thank_you/" + drId;
+      }, 10000); // Redirect after 2 seconds
+    }
+
+</script>
+
+      {{-- <script>
          document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
            const dropZoneElement = inputElement.closest(".drop-zone");
          
@@ -137,8 +246,8 @@
            }
          }
                
-      </script>
-      <script>
+      </script> --}}
+      {{-- <script>
          function validateForm(event) {
            event.preventDefault(); // Prevent the default form submission
          
@@ -174,6 +283,6 @@
          
          const form = document.querySelector('form');
          form.addEventListener('submit', validateForm);
-      </script>
+      </script> --}}
    </body>
 </html>

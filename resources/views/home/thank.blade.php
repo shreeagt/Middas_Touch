@@ -161,7 +161,7 @@ video#videoPlayer {
                     <span><i class="fa fa-check" style="font-size:36px"></i></span>
                 </div>
 
-   <p style="color:#fff;margin-bottom:20px;">Expressing heartfelt gratitude to the healing hands that have touched countless lives for 50 remarkable years.</p>
+   <p style="color:#fff;margin-bottom:20px;">Expressing heartfelt gratitude to the healing hands that have touched countless lives </p>
     {{-- <a href="{{ route('doctors.certificate', ['drid' => $doctor->id]) }}" class="btn btn-primary mt-3">Download Certificate</a> --}}
     {{-- <a href="{{ route('doctors.certificate', ['drid' => $drid]) }}" class="btn btn-primary mt-3">Download Certificate</a> --}}
     <a href="{{ route('doctors.certificate', ['id' => $video->id]) }}" class="btn btn-primary mt-3">Download Certificate</a> 

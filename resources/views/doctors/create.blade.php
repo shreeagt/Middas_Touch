@@ -15,33 +15,6 @@
                   <label for="location">Location</label>
                   <input type="text" name="location" class="form-control" placeholder="Location" required>
                 </div>
-
-                <div class="mb-3">
-                  <label for="speciality" class="form-label">Speciality</label>
-                  <select class="form-control" name="speciality" required>
-                      <option value="">Select Speciality</option>
-                      <option value="General Opthamologist" {{ old('speciality') == 'General Opthamologist' ? 'selected' : '' }}>General Opthamologist</option>
-                      <option value="Retina Specialist" {{ old('speciality') == 'Retina Specialist' ? 'selected' : '' }}>Retina Specialist</option>
-                      <option value="Cornea Specialist" {{ old('speciality') == 'Cornea Specialist' ? 'selected' : '' }}>Cornea Specialist</option>
-                      <option value="Glaucoma Specialist" {{ old('speciality') == 'Glaucoma Specialist' ? 'selected' : '' }}>Glaucoma Specialist</option>
-                      <option value="Optometrist" {{ old('speciality') == 'Optometrist' ? 'selected' : '' }}>Optometrist</option>
-                  </select>
-              </div>
-
-                <div class="mb-3">
-                    <label for="mci">Mci Registration Number</label>
-                    <input type="text" name="mci" class="form-control" placeholder="Mci Registration Number" required>
-                </div>
-
-                <div class="mb-3">
-                  <label for="logo" >Select Logo Image</label>
-                  <input type="file" name="logo" class="form-control" placeholder="Logo" required>
-                </div>
-
-                <div class="mb-3">
-                    <label for="photo" >Dr. Photo</label>
-                    <input type="file" name="photo" class="form-control" placeholder="Dr. Photo" required>
-                  </div>
                
 
                 <button type="submit" class="btn btn-success">Save Doctor</button>

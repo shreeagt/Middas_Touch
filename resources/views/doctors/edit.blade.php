@@ -15,30 +15,8 @@
                 <label for="location">Location</label>
                 <input type="location" name="location" class="form-control" value="{{ $doctor->location }}">
             </div>
-            <div class="form-group">
-                <label for="mci">Mci Registration Number</label>
-                <input type="mci" name="mci" id="mci" class="form-control" value="{{ $doctor->mci }}">
-            </div>
-            <div class="form-group">
-                <label for="logo">Logo</label>
-                <input type="file" name="logo" id="logo" class="form-control" value="logo">
-            </div>
-            <div class="form-group">
-                <label for="photo">Dr. Photo</label>
-                <input type="file" name="photo" id="photo" class="form-control" value="photo">
-            </div>
-            <div class="form-group">
-                <label for="speciality">Speciality</label>
-                <select name="speciality" id="speciality" class="form-control">
-                    <option value="">Select Speciality</option>
-                    <option value="General Opthamologist" {{ $doctor->speciality == 'General Opthamologist' ? 'selected' : '' }}>General Opthamologist</option>
-                    <option value="Retina Specialist" {{ $doctor->speciality == 'Retina Specialist' ? 'selected' : '' }}>Retina Specialist</option>
-                    <option value="Cornea Specialist" {{ $doctor->speciality == 'Cornea Specialist' ? 'selected' : '' }}>Cornea Specialist</option>
-                    <option value="Glaucoma Specialist" {{ $doctor->speciality == 'Glaucoma Specialist' ? 'selected' : '' }}>Glaucoma Specialist</option>
-                    <option value="Optometrist" {{ $doctor->speciality == 'Optometrist' ? 'selected' : '' }}>Optometrist</option>
-                </select>
-            </div>
-
+            
+            
             <!-- <div class="form-group">
                 <label for="role">Role:</label>
                 <input type="text" name="role" id="role" class="form-control" value="{{ $doctor->role }}">

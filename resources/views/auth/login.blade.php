@@ -11,7 +11,8 @@ height: 100vh;
 
 body.text-center {
     position: relative;
-      background-image: url('/assets/images/video_homebanner.png');
+      /* background-image: url('/assets/images/video_homebanner.png'); */
+      background-image: url('/assets/images/desktop_banner.jpg');
       background-repeat: no-repeat;
       background-position-y: center;
       background-position-x: center;

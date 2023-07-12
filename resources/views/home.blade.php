@@ -185,7 +185,7 @@
 
       setTimeout(function() {
         window.location.href = "/thank_you/" + drId;
-      }, 10000); // Redirect after 2 seconds
+      }, 5000); // Redirect after 2 seconds
     }
 
 </script>

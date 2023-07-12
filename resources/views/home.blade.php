@@ -32,6 +32,7 @@
       <style>
         .banner_text h1 {
             font-size: 25px;
+            color:#ffffff;
         }
 
         .image-container {

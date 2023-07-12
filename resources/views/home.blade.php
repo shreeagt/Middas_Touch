@@ -124,7 +124,7 @@
                <div class="banner_text ">
                   {{-- <h1> Hello  Dr.<span style="color:brown">{{ $doctor->doctorname }} </span><br>Please Upload your Handprint<span class="red" style="color:red">.</span> </h1> --}}
                   <div>
-                  <h1> Hello  Dr.<span style="color:#fff">{{ $doctor->doctorname }} </span><br>Your healing hands heal millions of patients </h1>
+                  <h1> Hello  Dr.<span style="color:#fff">{{ $doctor->doctorname }} </span><br>Your Midas touch helped in healing millions of patients </h1>
 
                   <button type="submit" class="btn btn-primary mb-2" id="btnimge" onclick="showImageContainer()">Click here for Scanner</button>
                 </div>

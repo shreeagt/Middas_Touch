@@ -125,7 +125,7 @@
                   <div>
                   <h1> Hello  Dr.<span style="color:#fff">{{ $doctor->doctorname }} </span><br>Your healing hands heal millions of patients </h1>
 
-                  <button type="submit" class="btn btn-primary mb-2" id="btnimge" onclick="showImageContainer()">Scan</button>
+                  <button type="submit" class="btn btn-primary mb-2" id="btnimge" onclick="showImageContainer()">Click here for Scanner</button>
                 </div>
                   <div class="image-container d-none" id="imgcontainer" onclick="showImage()">
                     <p id="palm-text" style="color:#fff">Place your palm</p>

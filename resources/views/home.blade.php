@@ -97,12 +97,13 @@
 
     @media screen and (max-width:600px){
       .banner_text h1 {
-            font-size: 21px;
+            font-size: 15px;
         }
 
         .image-container {
             width: 80vw;
-            height: 56vh;
+            height: 60vh;
+            /* height: 56vh; */
         }
     }
       </style>
